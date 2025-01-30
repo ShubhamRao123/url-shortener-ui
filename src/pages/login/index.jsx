@@ -46,7 +46,7 @@ function Login() {
         localStorage.setItem("username", response.name);
         localStorage.setItem("userEmail", response.email);
         localStorage.setItem("userPhone", response.phone || "");
-        // console.log(response.email);
+        console.log(response.id);
         navigate("/home");
       }
     } catch (error) {
