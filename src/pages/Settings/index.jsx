@@ -7,6 +7,8 @@ import {
   updateUserProfile,
 } from "../../services/userSetting";
 import { useNavigate } from "react-router-dom";
+import Header from "../../component/header";
+import Sidebar from "../../component/sidebar";
 
 function Settings() {
   const navigate = useNavigate();
@@ -91,6 +93,8 @@ function Settings() {
 
   return (
     <div style={styles.container}>
+      <Header />
+      <Sidebar />
       <h2>Edit Profile</h2>
       {loading ? (
         <p>Loading...</p>
