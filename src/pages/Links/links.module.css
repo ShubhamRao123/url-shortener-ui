@@ -1,101 +1,640 @@
-/* Container styles */
-.container {
-    padding: 20px;
-  }
-  
-  /* Sidebar styles */
-  .sidebar {
-    margin-top: 20px;
-  }
-  
-  .sidebar p {
-    cursor: pointer;
-    padding: 10px;
-    transition: background 0.3s ease;
-  }
-  
-  .sidebar p:hover {
-    background: #f0f0f0;
-    border-radius: 5px;
-  }
-  
-  /* Modal overlay */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contentContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw; 
+  overflow-x: hidden; 
+  box-sizing: border-box; 
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0; 
+  overflow-x: hidden;
+  padding: 20px; 
+  box-sizing: border-box;
+}
+
+
+
+ 
   .modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1201;
   }
   
-  /* Modal content */
   .modalContent {
     background: white;
     padding: 20px;
+    margin-top: 96px;
     border-radius: 8px;
-    width: 400px;
+    width: 450px;
+    height: 712px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   .modalHeader{
-    background-color: #0056b3;
+    background-color: #3B3C51;
     color: #f0f0f0;
+    margin-top: -39px;
+    margin-left: -19px;
+    margin-right: -21px;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 24.59px;
+    display: flex;
+    align-items: center;
   }
+  
+  .modalHeader p{
+    margin-right: 339px;
+    margin-left: 21px;
+  }
+
   .modalHeader img{
     cursor: pointer;
   }
   
-  /* Input fields */
-  .inputField {
+  .inputFieldModal {
     width: 100%;
     padding: 8px;
+    padding-left: 3px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
   }
+
+  .inputFieldModal1{
+    width: 100%;
+    height: 150px;
+    padding: 8px;
+    padding-left: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
   
-  /* Expiration section */
-  .expirationContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+
+  .urlLabel{
+    font-size: 16px;
+    font-weight: 600;
+    color: #3B3C51;
+    line-height: 21.86px;
+    margin-top: 27px;
+    margin-right: 317px;
+  }
+
+  .urlLabel span{
+    color: #FF0101;
+  }
+
+  .remarksLabel{
+    font-size: 16px;
+    font-weight: 600;
+    color: #3B3C51;
+    line-height: 21.86px;
+    margin-right: 368px;
   }
   
-  /* Buttons */
+  .remarksLabel span{
+    color: #FF0101;
+  }
+ 
+  .expirationContainer {
+    position: relative;
+  }
+
+  .expirationContainer p{
+    margin-right: 332px;
+  }
+
+  /* toggle button */
+  .toggleBtn {
+    background-color: #b7b9ba; 
+    border: 1px solid #b7b9ba;
+    border-radius: 99px;
+    width: 50px;
+    height: 28px;
+    cursor: pointer;
+    transition: background-color 0.1s ease, border-color 0.2s ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 1.5%;
+    left: 91%;
+  }
+  
+  .toggleBtn .thumb {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 99px;
+    position: absolute;
+    top: 50%;
+    left: 3px; 
+    transform: translateY(-50%);
+    transition: left 0.15s ease;
+  }
+  
+  .toggleBtn.toggle .thumb {
+    left: calc(100% - 23px); 
+  }
+  
+  .toggleBtn.toggle {
+    background-color: #4A70D1; 
+  }
+  
+  
   .buttonContainer {
+    background-color: rgba(59, 60, 81, 0.1);
+    color: #f0f0f0;
+    margin-top: 187px;
+    height: 66px;
+    margin-left: -20px;
+    margin-right: -21px;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 24.59px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .createButtonModal {
+    font-weight: 600;
+    background: #1B48DA;
+    color: white;
+    width: 70px;
+    border: 1px solid #1B48DA;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-left: 262px;
+    width: 23%;
+    font-size: 16px;
+    line-height: 21.86px;
+    cursor: pointer;
+  }
+  
+ 
+  
+  .clearButton {
+    color: #3B3C51;
+    width: 70px;
+    cursor: pointer;
+  }
+  
+
+  
+  @media (max-width: 1024px) {
+
+
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 12001;
+    }
+
+    .modalContent {
+      width: 49%; /* Adjust width for medium screens */
+      height: auto;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 27%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 17%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 367px;
+    }
+    
+    .buttonContainer {
+      margin-top: 206px;
+      margin-bottom: -20px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+
+
+    .modalContent {
+      width: 68%;
+      padding: 15px;
+      margin-left: -100px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+    }
+  
+    .inputFieldModal,
+    .inputFieldModal1 {
+      font-size: 14px;
+    }
+  
+    .toggleBtn {
+      width: 45px;
+      height: 25px;
+      left: 91%;
+    }
+  
+    .toggleBtn .thumb {
+      height: 18px;
+      width: 18px;
+    }
+  
+    
+  
+    .buttonContainer {
+      padding: 10px;
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-bottom: -14px;
+    }
+
+    .clearButton {
+      color: #3B3C51;
+      width: 70px;
+      cursor: pointer;
+    }
+
+    .createButtonModal {
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modalContent {
+      width: 75%;
+      padding: 12px;
+      margin-left: 5px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+    }
+
+    .expirationContainer p {
+      margin-right: 414px;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+      width: 40px;
+      height: 22px;
+    }
+  
+    .toggleBtn .thumb {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .createButtonModal {
+      width: 28%;
+      font-size: 14px;
+    }
+  
+    .buttonContainer {
+      padding: 8px;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modalContent {
+      width: 72%;
+      margin-left: 3px;
+      height: auto;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      margin-left: -13px;
+      margin-right: -12px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .inputFieldModal,
+    .inputFieldModal1 {
+      font-size: 13px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 85px;
+      margin-right: 389px;
+    }
+
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 130px;
+      margin-right: 389px;
+    }
+  
+
+    .expirationContainer p {
+      margin-right: 414px;
+      width: 112px;
+    }
+
+    .toggleBtn {
+      left: 90%;
+      width: 38px;
+      height: 20px;
+    }
+  
+    .toggleBtn .thumb {
+      width: 14px;
+      height: 14px;
+    }
+  
+    .createButtonModal {
+      width: 45%;
+    }
+  }
+  
+
+
+  .mainContent {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    overflow-y: hidden; 
+    margin-left: -28px;
+    min-height: 100vh; 
+  }
+  
+  .table {
+    width: 97%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 15px;
     margin-top: 20px;
   }
   
-  .button {
-    padding: 8px 15px;
+  .table th {
+    padding: 30px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+
+  .table td {
+    padding: 10px 13px;
+    text-align: left;
+    border-bottom: 1px solid #F8F8F8;
+    border-right: 1px solid #F8F8F8;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19.12px;
+  }
+
+  .table th {
+    background-color: #F3F7FD;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21.86px;
+    color: #3B3C51;
+  }
+  
+  .table th img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  .sortIcon,
+  .sortIcon1 {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .editIcon{
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+ 
+
+  .shortLinkCell{
+    display: flex;
+    align-items: center;
+  }
+
+
+  .statusCell {
+    color: #1EB036;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.12px;
+  }
+  
+  .statusCell.inactive {
+    color: #B0901E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.12px;
+  }
+  
+
+
+
+   .pagination {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 219px;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.pagination button {
+    background-color: #ffffff;
+    color: #212B36;
     border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: 0.3s;
+}
+
+.prevButton {
+    background-color: #FFFFFF;
+}
+
+.pagination button:hover {
+    border: 0.66px solid #4200FF;
+}
+
+.pagination button:disabled {
+    background-color: #919EAB;
+}
+
+.pagination .active {
+    border: 0.66px solid #4200FF;
+}
+
+
+
+/* Existing styles... */
+
+
+/* Add media queries for responsiveness */
+
+@media only screen and (max-width: 1200px) {
+  /* .table {
+    overflow-x: auto; 
+  } */
+  /* .pagination {
+    left: 150px;
+  } */
+}
+
+@media only screen and (max-width: 992px) {
+  .pagination {
+    left: 100px;
   }
-  
-  .createButton {
-    background: #007bff;
-    color: white;
-    margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .pagination {
+    left: 50px;
   }
-  
-  .createButton:hover {
-    background: #0056b3;
+}
+
+@media only screen and (max-width: 576px) {
+  .pagination {
+    left: 0;
+    bottom: 20px;
   }
-  
-  .clearButton {
-    background: #dc3545;
-    color: white;
+  .pagination button {
+    padding: 3px 6px;
   }
-  
-  .clearButton:hover {
-    background: #b02a37;
+}
+
+/* Styles to enable horizontal scroll for table */
+
+@media only screen and (max-width: 1200px) {
+  .table {
+    width: 100%; /* Set table width to 100% to enable horizontal scroll */
   }
-  
+  .table th, .table td {
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}

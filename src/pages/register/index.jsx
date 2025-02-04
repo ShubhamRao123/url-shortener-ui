@@ -83,108 +83,108 @@ function Register() {
   return (
     <div>
       <div className={styles.container}>
-        <div className={styles.formContainer}>
-          <div className={styles.innerContainer}>
-            <header>
-              <img
-                src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170883/download_2_xxx8cd.png"
-                alt="Register"
-              />
-            </header>
-            <form onSubmit={handleRegister}>
-              <div>
-                <label>Name</label>
-                <input
-                  type="text"
-                  value={formdata.name}
-                  placeholder="Enter your name"
-                  onChange={(e) =>
-                    setFormdata({ ...formdata, name: e.target.value })
-                  }
-                />
-                {formError.name && (
-                  <p className={styles.error}>{formError.name}</p>
-                )}
-              </div>
-              <div>
-                <label>Email</label>
-                <input
-                  type="email"
-                  value={formdata.email}
-                  placeholder="Example@email.com"
-                  onChange={(e) =>
-                    setFormdata({ ...formdata, email: e.target.value })
-                  }
-                />
-                {formError.email && (
-                  <p className={styles.error}>{formError.email}</p>
-                )}
-              </div>
-              <div>
-                <label>Phone</label>
-                <input
-                  type="text"
-                  value={formdata.phone}
-                  placeholder="Enter your phone number"
-                  onChange={(e) =>
-                    setFormdata({ ...formdata, phone: e.target.value })
-                  }
-                />
-                {formError.phone && (
-                  <p className={styles.error}>{formError.phone}</p>
-                )}
-              </div>
-              <div>
-                <label>Password</label>
-                <input
-                  type="password"
-                  value={formdata.password}
-                  placeholder="At least 8 characters"
-                  onChange={(e) =>
-                    setFormdata({ ...formdata, password: e.target.value })
-                  }
-                />
-                {formError.password && (
-                  <p className={styles.error}>{formError.password}</p>
-                )}
-              </div>
-              <div>
-                <label>Confirm Password</label>
-                <input
-                  type="password"
-                  value={formdata.confirmPassword}
-                  placeholder="Re-enter your password"
-                  onChange={(e) =>
-                    setFormdata({
-                      ...formdata,
-                      confirmPassword: e.target.value,
-                    })
-                  }
-                />
-                {formError.confirmPassword && (
-                  <p className={styles.error}>{formError.confirmPassword}</p>
-                )}
-              </div>
-              <button disabled={loading}>
-                {loading ? "Creating Account..." : "Continue"}
-              </button>
-              <p>
-                Already have an account?{" "}
-                <span
-                  className={styles.signupLink}
-                  onClick={() => navigate("/login")}
-                >
-                  Sign in
-                </span>
-              </p>
-            </form>
-          </div>
-        </div>
         <div className={styles.imageContainer}>
           <img
-            src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170799/m_image_h22sne.png"
-            alt="Delicious Food"
+            src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170883/download_2_xxx8cd.png"
+            alt="Register"
           />
+        </div>
+        <div className={styles.formContainer}>
+          <div className={styles.header}>
+            <p>SignUp</p>
+            <p
+              onClick={() => navigate("/login")}
+              className={styles.headerLogin}
+            >
+              Login
+            </p>
+          </div>
+          <div className={styles.innerContainer}>
+            <h2>Join us Today!</h2>
+            <form onSubmit={handleRegister}>
+              <div className={styles.form}>
+                <div className={styles.nameInput}>
+                  <input
+                    type="text"
+                    value={formdata.name}
+                    placeholder="Name"
+                    onChange={(e) =>
+                      setFormdata({ ...formdata, name: e.target.value })
+                    }
+                  />
+                  {formError.name && (
+                    <p className={styles.error}>{formError.name}</p>
+                  )}
+                </div>
+                <div className={styles.nameInput}>
+                  <input
+                    type="email"
+                    value={formdata.email}
+                    placeholder="Email id"
+                    onChange={(e) =>
+                      setFormdata({ ...formdata, email: e.target.value })
+                    }
+                  />
+                  {formError.email && (
+                    <p className={styles.error}>{formError.email}</p>
+                  )}
+                </div>
+                <div className={styles.nameInput}>
+                  <input
+                    type="text"
+                    value={formdata.phone}
+                    placeholder="Mobile no."
+                    onChange={(e) =>
+                      setFormdata({ ...formdata, phone: e.target.value })
+                    }
+                  />
+                  {formError.phone && (
+                    <p className={styles.error}>{formError.phone}</p>
+                  )}
+                </div>
+                <div className={styles.nameInput}>
+                  <input
+                    type="password"
+                    value={formdata.password}
+                    placeholder="Password"
+                    onChange={(e) =>
+                      setFormdata({ ...formdata, password: e.target.value })
+                    }
+                  />
+                  {formError.password && (
+                    <p className={styles.error}>{formError.password}</p>
+                  )}
+                </div>
+                <div className={styles.nameInput}>
+                  <input
+                    type="password"
+                    value={formdata.confirmPassword}
+                    placeholder="Confirm Password"
+                    onChange={(e) =>
+                      setFormdata({
+                        ...formdata,
+                        confirmPassword: e.target.value,
+                      })
+                    }
+                  />
+                  {formError.confirmPassword && (
+                    <p className={styles.error}>{formError.confirmPassword}</p>
+                  )}
+                </div>
+                <p
+                  disabled={loading}
+                  className={styles.loginButton}
+                  onClick={handleRegister}
+                >
+                  {loading ? "Creating Account..." : "Register"}
+                </p>
+                <p className={styles.signupLink}>
+                  Already have an account?{" "}
+                  <span onClick={() => navigate("/login")}>Login</span>
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+/* 📌 Remove Scroll from Sidebar */
+.sidebar {
+  overflow: hidden; /* Prevents scrolling */
+}
+
+/* 📌 Remove Scroll from Body When Sidebar is Open */
+body {
+  overflow: hidden;
+}
+
+
+
+ /* 📌 Default Sidebar Styles */
+.sidebar {
+    margin-top: -65px;
+    width: 220px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid #e0e4eb;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* 📌 Sidebar Links */
+  .sidebarContent {
+    border-bottom: 1px solid #e0e4eb;
+  }
+  
+  .sidebarP,
+  .sidebarSettings {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.12px;
+    color: #3b3c51;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .sidebarSettings {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .sidebarSettings::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e4eb;
+  }
+  
+  .sidebar p img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+  
+  .sidebar p:hover,
+  .sidebar p.active {
+    background-color: #f3f7fd;
+    color: #1b48da;
+    font-weight: 600;
+  }
+  
+  /* 📌 Hides Sidebar on Mobile & Tablet */
+  @media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 187px;
+        width: 220px;
+        height: 100vh;
+        background-color: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1101;
+    }
+  
+    /* Sidebar Visible When Open */
+    .sidebar.open {
+      left: 0;
+    }
+  
+    /* 📌 Hamburger Icon */
+    .hamburger {
+        position: fixed;
+        top: 112px;
+        left: 18px;
+        z-index: 1102;
+        cursor: pointer;
+        background-color: #1b48da;
+        width: fit-content; 
+    }
+  
+    .hamburger img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+
+
+  @media (min-width: 768px) and (max-width: 830px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 210px;
+        width: 220px;
+        height: 100vh;
+        background-color: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1101;
+    }
+  
+    /* Sidebar Visible When Open */
+    .sidebar.open {
+      left: 0;
+    }
+  
+    /* 📌 Hamburger Icon */
+    .hamburger {
+        position: fixed;
+        top: 145px;
+        left: 18px;
+        z-index: 1102;
+        cursor: pointer;
+        background-color: #1b48da;
+        width: fit-content; 
+    }
+  
+    .hamburger img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (max-width: 768px){
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 222px;
+        width: 220px;
+        height: 100vh;
+        background-color: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1101;
+    }
+  
+    /* Sidebar Visible When Open */
+    .sidebar.open {
+      left: 0;
+    }
+  
+    /* 📌 Hamburger Icon */
+    .hamburger {
+        position: fixed;
+        top: 151px;
+        left: 18px;
+        z-index: 1102;
+        cursor: pointer;
+        background-color: #1b48da;
+        width: fit-content; 
+    }
+  
+    .hamburger img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (max-width: 480px){
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 290px;
+        width: 220px;
+        height: 100vh;
+        background-color: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1101;
+    }
+  
+    /* Sidebar Visible When Open */
+    .sidebar.open {
+      left: 0;
+    }
+  
+    /* 📌 Hamburger Icon */
+    .hamburger {
+        position: fixed;
+        top: 217px;
+        left: 18px;
+        z-index: 1102;
+        cursor: pointer;
+        background-color: #1b48da;
+        width: fit-content; 
+    }
+  
+    .hamburger img {
+      width: 30px;
+      height: 30px;
+    }
+  }

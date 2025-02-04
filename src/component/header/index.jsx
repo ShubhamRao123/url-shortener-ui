@@ -19,6 +19,8 @@ function Header({ fetchShortLinks }) {
   const [username, setUsername] = useState(""); // State to store the username
   const [initials, setInitials] = useState(""); // State to store user initials
   const [showLogout, setShowLogout] = useState(false); // State for logout dropdown
+  const [urlError, setUrlError] = useState(""); // Error state for URL
+  const [remarksError, setRemarksError] = useState(""); // Error state for Remarks
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -86,6 +88,19 @@ function Header({ fetchShortLinks }) {
   };
 
   const handleCreate = async () => {
+    setUrlError(""); // Reset errors initially
+    setRemarksError("");
+
+    if (!destinationUrl.trim()) {
+      setUrlError("This field is mandatory");
+    }
+    if (!remarks.trim()) {
+      setRemarksError("This field is mandatory");
+    }
+
+    if (!destinationUrl.trim() || !remarks.trim()) {
+      return; // Stop execution if validation fails
+    }
     const userId = localStorage.getItem("userId");
 
     if (!userId) {
@@ -129,24 +144,43 @@ function Header({ fetchShortLinks }) {
 
   return (
     <div className={styles.container}>
+      <div className={styles.logoContainer}>
+        <img
+          src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170883/download_2_xxx8cd.png"
+          alt=""
+        />
+      </div>
       {/* Display the greeting and date */}
       <div className={styles.greeting}>
-        <p>Hello {username.split(" ")[0]}</p>
-        <p>{formatDate()}</p>
+        <p>
+          <img
+            src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738577384/%EF%B8%8F_mpgsck.png"
+            alt=""
+          />{" "}
+          Good morning,{" "}
+          {username.split(" ")[0].charAt(0).toUpperCase() +
+            username.split(" ")[0].slice(1)}
+        </p>
+        <span>{formatDate()}</span>
       </div>
 
-      <div>
-        <p onClick={toggleModal} className={styles.createButton}>
-          Create New
-        </p>
-      </div>
-      <div>
+      <p onClick={toggleModal} className={styles.createButton}>
+        <img
+          src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738582634/Frame_qu1ln8.png"
+          alt=""
+        />
+        Create New
+      </p>
+      <div className={styles.inputField}>
+        <img
+          src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738583471/Frame_1_ggparq.png"
+          alt=""
+        />
         <input
           type="text"
-          placeholder="Search by remarks..."
+          placeholder="Search by remarks"
           value={searchRemarks}
           onChange={handleSearchChange}
-          className={styles.inputField}
         />
       </div>
       {/* User Initials Avatar */}
@@ -164,58 +198,66 @@ function Header({ fetchShortLinks }) {
         <div className={styles.modalOverlay}>
           <div className={styles.modalContent}>
             <div className={styles.modalHeader}>
-              <h2>Create New Link</h2>
+              <p> New Link</p>
               <img
                 onClick={toggleModal}
                 src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738233632/close_FILL0_wght400_GRAD0_opsz24_5_1_nhvtsa.png"
                 alt=""
               />
             </div>
-            <label>Destination URL:</label>
+            <p className={styles.urlLabel}>
+              Destination Url <span>*</span>
+            </p>
             <input
               type="text"
               placeholder="https://web.whatsapp.com/"
               value={destinationUrl}
               onChange={(e) => setDestinationUrl(e.target.value)}
-              className={styles.inputField}
+              className={styles.inputFieldModal}
             />
-            <label>Remarks:</label>
-            <input
-              type="text"
+            {urlError && <p className={styles.errorText}>{urlError}</p>}{" "}
+            {/* Show error */}
+            <p className={styles.remarksLabel}>
+              Remarks <span>*</span>
+            </p>
+            <textarea
               placeholder="Add remarks"
               value={remarks}
               onChange={(e) => setRemarks(e.target.value)}
-              className={styles.inputField}
+              className={styles.inputFieldModal1}
             />
-
+            {remarksError && <p className={styles.errorText}>{remarksError}</p>}{" "}
+            {/* Show error */}
             <div className={styles.expirationContainer}>
-              <label>Expiration:</label>
-              <input
-                type="checkbox"
-                checked={hasExpiration}
-                onChange={() => setHasExpiration(!hasExpiration)}
-              />
+              <p>Link Expiration</p>
+
+              <button
+                className={`${styles.toggleBtn} ${
+                  hasExpiration ? styles.toggle : ""
+                }`}
+                onClick={() => setHasExpiration(!hasExpiration)}
+              >
+                <div
+                  className={`${styles.thumb} ${
+                    hasExpiration ? styles.thumbActive : ""
+                  }`}
+                ></div>
+              </button>
               <input
                 type="datetime-local"
                 value={expiresAt}
                 onChange={(e) => setExpiresAt(e.target.value)}
-                className={styles.inputField}
-                disabled={!hasExpiration} // Disable the input when hasExpiration is false
+                className={styles.inputFieldModal}
+                disabled={!hasExpiration}
               />
             </div>
             <div className={styles.buttonContainer}>
-              <button
-                onClick={handleCreate}
-                className={`${styles.button} ${styles.createButton}`}
-              >
-                Create New
-              </button>
-              <button
-                onClick={handleClear}
-                className={`${styles.button} ${styles.clearButton}`}
-              >
+              <p onClick={handleClear} className={styles.clearButton}>
                 Clear
-              </button>
+              </p>
+              <p onClick={handleCreate} className={styles.createButtonModal}>
+                Create New
+              </p>
             </div>
           </div>
         </div>

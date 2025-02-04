@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+
+.contentContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw; 
+  overflow-x: hidden; 
+  box-sizing: border-box; 
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  overflow: hidden; 
+}
+
+ .mainContent {
+  flex: 1;
+  min-width: 0;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  margin-top: 100px;
+  margin-left: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formGroupName,
+.formGroupName1,
+.formGroupName2 {
+  display: flex;
+  align-items: center;
+}
+
+.formGroupName {
+  gap: 90px;
+}
+
+.formGroupName1 {
+  gap: 75px;
+}
+
+.formGroupName2 {
+  gap: 55px;
+}
+
+form p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #181820;
+  line-height: 19.12px;
+}
+
+form input {
+  width: 266px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  color: #3B3C51;
+  font-size: 14px;
+  line-height: 19.12px;
+  font-weight: 400;
+}
+
+/* Style buttons */
+form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Save Changes button */
+form button:first-of-type {
+  background-color: #1b48da;
+  color: #ffffff;
+  margin-top: 65px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19.12px;
+  width: 415px;
+}
+
+/* Delete Account button */
+form button:last-of-type {
+  background-color: #EB0D0D;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19.12px;
+  width: 415px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .mainContent {
+    margin-left: 200px;
+  }
+
+  .formGroupName {
+    gap: 70px;
+  }
+
+  .formGroupName1 {
+    gap: 55px;
+  }
+
+  .formGroupName2 {
+    gap: 35px;
+  }
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 415px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainContent {
+    margin-left: 0px;
+  }
+
+  .formGroupName {
+    gap: 70px;
+  }
+
+  .formGroupName1 {
+    gap: 57px;
+  }
+
+  .formGroupName2 {
+    gap: 39px;
+  }
+
+ 
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 415px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: -110px;
+    margin-top: 50px;
+    margin-right: 110px;
+  }
+
+  .formGroupName{
+    align-items: flex-start;
+    gap: 74px;
+  }
+
+  .formGroupName1 {
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .formGroupName2 {
+    align-items: flex-start;
+    gap: 41px;
+  }
+
+  
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 415px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainContent {
+    margin-top: 90px;
+    margin-left: -179px;
+    padding: 10px;
+    margin-right: 52px;
+  }
+
+  form p {
+    font-size: 14px;
+  }
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 456px;
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .mainContent {
+    margin-left: -241px;
+    margin-top: 67px;
+    padding: 10px;
+  }
+
+  form p {
+    font-size: 14px;
+  }
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+}

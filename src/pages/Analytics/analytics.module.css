@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contentContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw; 
+  overflow-x: hidden; 
+  box-sizing: border-box; 
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0; 
+  overflow-x: hidden;
+  padding: 20px; 
+  box-sizing: border-box;
+}
+
+
+.mainContent {
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow-y: hidden; 
+  margin-left: -28px;
+  min-height: 100vh; 
+}
+
+.table {
+  width: 97%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.table th {
+  padding: 30px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+.table td {
+  padding: 10px 13px;
+  text-align: left;
+  border-bottom: 1px solid #F8F8F8;
+  border-right: 1px solid #F8F8F8;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19.12px;
+}
+
+.table th {
+  background-color: #F3F7FD;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.86px;
+  color: #3B3C51;
+}
+
+.table th img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.sortIcon,
+.sortIcon1 {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.editIcon{
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+
+.shortLinkCell{
+  display: flex;
+  align-items: center;
+}
+
+
+.statusCell {
+  color: #1EB036;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.12px;
+}
+
+.statusCell.inactive {
+  color: #B0901E;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.12px;
+}
+
+
+
+
+ .pagination {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 40px;
+  left: 219px;
+  right: 0;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+}
+
+.pagination button {
+  background-color: #ffffff;
+  color: #212B36;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prevButton {
+  background-color: #FFFFFF;
+}
+
+.pagination button:hover {
+  border: 0.66px solid #4200FF;
+}
+
+.pagination button:disabled {
+  background-color: #919EAB;
+}
+
+.pagination .active {
+  border: 0.66px solid #4200FF;
+}

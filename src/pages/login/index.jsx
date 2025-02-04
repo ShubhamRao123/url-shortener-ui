@@ -60,75 +60,63 @@ function Login() {
   return (
     <div>
       <div className={styles.container}>
-        {" "}
-        {/* Using CSS module */}
+        <div className={styles.imageContainer}>
+          <img
+            src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170883/download_2_xxx8cd.png"
+            alt="login"
+          />
+        </div>
         <div className={styles.formContainer}>
-          {" "}
-          {/* Using CSS module */}
+          <div className={styles.header}>
+            <p onClick={() => navigate("/")}>SignUp</p>
+            <p className={styles.headerLogin}>Login</p>
+          </div>
           <div className={styles.innerContainer}>
-            {" "}
-            {/* Using CSS module */}
-            <header>
-              <img
-                src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170883/download_2_xxx8cd.png"
-                alt=""
-              />
-            </header>
+            <h2>Join us Today!</h2>
             <form onSubmit={handleRegister}>
-              <div>
-                <label>Email</label>
-                <input
-                  type="email"
-                  value={formdata.email}
-                  placeholder="Example@email.com"
-                  onChange={(e) =>
-                    setFormdata({ ...formdata, email: e.target.value })
-                  }
-                />
-                {formError.email && (
-                  <p className={styles.error}>{formError.email}</p>
-                )}{" "}
-                {/* Using CSS module */}
-              </div>
+              <div className={styles.form}>
+                <div className={styles.nameInput}>
+                  <input
+                    type="email"
+                    value={formdata.email}
+                    placeholder="Email id"
+                    onChange={(e) =>
+                      setFormdata({ ...formdata, email: e.target.value })
+                    }
+                  />
+                  {formError.email && (
+                    <p className={styles.error}>{formError.email}</p>
+                  )}
+                </div>
 
-              <div>
-                <label>Password</label>
-                <input
-                  type="password"
-                  value={formdata.password}
-                  placeholder="At least 8 characters"
-                  onChange={(e) =>
-                    setFormdata({ ...formdata, password: e.target.value })
-                  }
-                />
-                {formError.password && (
-                  <p className={styles.error}>{formError.password}</p>
-                )}
-              </div>
-              <button disabled={loading}>
-                {loading ? "Creating Account..." : "Sign in"}
-              </button>
-              <p>
-                Don't you have an account?{" "}
-                <span
-                  className={styles.signupLink}
-                  onClick={() => navigate("/")}
+                <div className={styles.nameInput}>
+                  <input
+                    type="password"
+                    value={formdata.password}
+                    placeholder="Password"
+                    onChange={(e) =>
+                      setFormdata({ ...formdata, password: e.target.value })
+                    }
+                  />
+                  {formError.password && (
+                    <p className={styles.error}>{formError.password}</p>
+                  )}
+                </div>
+                <p
+                  disabled={loading}
+                  className={styles.loginButton}
+                  onClick={handleRegister}
                 >
-                  {" "}
-                  {/* Using CSS module */}
-                  Sign up
-                </span>
-              </p>
+                  {loading ? "Signing..." : "Register"}
+                </p>
+
+                <p className={styles.signupLink}>
+                  Don't you have an account?{" "}
+                  <span onClick={() => navigate("/")}>SignUp</span>
+                </p>
+              </div>
             </form>
           </div>
-        </div>
-        <div className={styles.imageContainer}>
-          {" "}
-          {/* Using CSS module */}
-          <img
-            src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738170799/m_image_h22sne.png"
-            alt="Delicious Food"
-          />
         </div>
       </div>
     </div>

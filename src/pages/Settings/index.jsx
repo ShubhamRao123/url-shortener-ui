@@ -94,49 +94,60 @@ function Settings() {
   return (
     <div style={styles.container}>
       <Header />
-      <Sidebar />
-      <h2>Edit Profile</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p style={{ color: "red" }}>{error}</p>
-      ) : (
-        <form style={styles.form}>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="fullName"
-            value={userDetails.fullName}
-            onChange={handleInputChange}
-            required
-          />
+      <div className={styles.contentContainer}>
+        <div className={styles.sidebar}>
+          <Sidebar />
+        </div>
+        <div className={styles.mainContent}>
+          {loading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p style={{ color: "red" }}>{error}</p>
+          ) : (
+            <form style={styles.form}>
+              <div className={styles.formGroupName}>
+                <p>Name</p>
+                <input
+                  type="text"
+                  name="fullName"
+                  value={userDetails.fullName}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
 
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={userDetails.email}
-            onChange={handleInputChange}
-            required
-          />
+              <div className={styles.formGroupName1}>
+                <p>Email id</p>
+                <input
+                  type="email"
+                  name="email"
+                  value={userDetails.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
 
-          <label>Phone Number:</label>
-          <input
-            type="text"
-            name="phoneNumber"
-            value={userDetails.phoneNumber}
-            onChange={handleInputChange}
-            required
-          />
+              <div className={styles.formGroupName2}>
+                <p>Mobile no.</p>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  value={userDetails.phoneNumber}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
 
-          <button type="button" onClick={handleSaveClick}>
-            Save Changes
-          </button>
-          <button type="button" onClick={handleDeleteAccount}>
-            Delete Account
-          </button>
-        </form>
-      )}
+              <button type="button" onClick={handleSaveClick}>
+                Save Changes
+              </button>
+              <button type="button" onClick={handleDeleteAccount}>
+                Delete Account
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

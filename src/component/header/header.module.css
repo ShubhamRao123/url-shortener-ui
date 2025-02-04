@@ -1,100 +1,884 @@
-/* Container styles */
-.container {
-    padding: 20px;
-  }
-  
-  /* Sidebar styles */
-  .sidebar {
-    margin-top: 20px;
-  }
-  
-  .sidebar p {
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .sidebar p:hover {
-    background: #f0f0f0;
-    border-radius: 5px;
-  }
-  
-  /* Modal overlay */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+
+ 
   .modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
   }
   
-  /* Modal content */
   .modalContent {
     background: white;
     padding: 20px;
+    margin-top: 96px;
     border-radius: 8px;
-    width: 400px;
+    width: 450px;
+    height: 712px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   .modalHeader{
-    background-color: #0056b3;
+    background-color: #3B3C51;
     color: #f0f0f0;
+    margin-top: -39px;
+    margin-left: -19px;
+    margin-right: -21px;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 24.59px;
+    display: flex;
+    align-items: center;
   }
+  
+  .modalHeader p{
+    margin-right: 339px;
+    margin-left: 21px;
+  }
+
   .modalHeader img{
     cursor: pointer;
   }
   
-  /* Input fields */
-  .inputField {
+  .inputFieldModal {
     width: 100%;
     padding: 8px;
+    padding-left: 3px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
   }
-  
-  /* Expiration section */
-  .expirationContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  /* Buttons */
-  .buttonContainer {
-    margin-top: 20px;
-  }
-  
-  .button {
-    padding: 8px 15px;
-    border: none;
+
+  .inputFieldModal1{
+    width: 100%;
+    height: 150px;
+    padding: 8px;
+    padding-left: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
   }
+
   
-  .createButton {
-    background: #007bff;
+
+
+  .urlLabel{
+    font-size: 16px;
+    font-weight: 600;
+    color: #3B3C51;
+    line-height: 21.86px;
+    margin-top: 27px;
+    margin-right: 317px;
+  }
+
+  .urlLabel span{
+    color: #FF0101;
+  }
+
+  .remarksLabel{
+    font-size: 16px;
+    font-weight: 600;
+    color: #3B3C51;
+    line-height: 21.86px;
+    margin-right: 368px;
+  }
+  
+  .remarksLabel span{
+    color: #FF0101;
+  }
+ 
+  .expirationContainer {
+    position: relative;
+  }
+
+  .expirationContainer p{
+    margin-right: 332px;
+  }
+
+  /* toggle button */
+  .toggleBtn {
+    background-color: #b7b9ba; 
+    border: 1px solid #b7b9ba;
+    border-radius: 99px;
+    width: 50px;
+    height: 28px;
+    cursor: pointer;
+    transition: background-color 0.1s ease, border-color 0.2s ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 1.5%;
+    left: 91%;
+  }
+  
+  .toggleBtn .thumb {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 99px;
+    position: absolute;
+    top: 50%;
+    left: 3px; 
+    transform: translateY(-50%);
+    transition: left 0.15s ease;
+  }
+  
+  .toggleBtn.toggle .thumb {
+    left: calc(100% - 23px); 
+  }
+  
+  .toggleBtn.toggle {
+    background-color: #4A70D1; 
+  }
+  
+  
+  .buttonContainer {
+    background-color: rgba(59, 60, 81, 0.1);
+    color: #f0f0f0;
+    margin-top: 187px;
+    height: 66px;
+    margin-left: -20px;
+    margin-right: -21px;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 24.59px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .createButtonModal {
+    font-weight: 600;
+    background: #1B48DA;
     color: white;
-    margin-right: 10px;
+    width: 70px;
+    border: 1px solid #1B48DA;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-left: 262px;
+    width: 23%;
+    font-size: 16px;
+    line-height: 21.86px;
+    cursor: pointer;
   }
   
-  .createButton:hover {
-    background: #0056b3;
-  }
+ 
   
   .clearButton {
-    background: #dc3545;
-    color: white;
+    color: #3B3C51;
+    width: 70px;
+    cursor: pointer;
+  }
+
+  .errorText{
+    color: #FF0101;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-right: 298px;
   }
   
-  .clearButton:hover {
-    background: #b02a37;
+
+  
+  @media (max-width: 1024px) {
+
+
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modalContent {
+      width: 49%; /* Adjust width for medium screens */
+      height: auto;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 27%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 17%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 367px;
+    }
+    
+    .buttonContainer {
+      margin-top: 206px;
+      margin-bottom: -20px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
   }
   
+  @media (max-width: 768px) {
+
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+
+
+    .modalContent {
+      width: 68%;
+      padding: 15px;
+      margin-left: -100px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+    }
+  
+    .inputFieldModal,
+    .inputFieldModal1 {
+      font-size: 14px;
+    }
+  
+    .toggleBtn {
+      width: 45px;
+      height: 25px;
+      left: 91%;
+    }
+  
+    .toggleBtn .thumb {
+      height: 18px;
+      width: 18px;
+    }
+  
+    
+  
+    .buttonContainer {
+      padding: 10px;
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-bottom: -14px;
+    }
+
+    .clearButton {
+      color: #3B3C51;
+      width: 70px;
+      cursor: pointer;
+    }
+
+    .createButtonModal {
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modalContent {
+      width: 75%;
+      padding: 12px;
+      margin-left: 5px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+    }
+
+    .expirationContainer p {
+      margin-right: 414px;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+      width: 40px;
+      height: 22px;
+    }
+  
+    .toggleBtn .thumb {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .createButtonModal {
+      width: 28%;
+      font-size: 14px;
+    }
+  
+    .buttonContainer {
+      padding: 8px;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modalContent {
+      width: 72%;
+      margin-left: 3px;
+      height: auto;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      margin-left: -13px;
+      margin-right: -12px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .inputFieldModal,
+    .inputFieldModal1 {
+      font-size: 13px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 85px;
+      margin-right: 389px;
+    }
+
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 130px;
+      margin-right: 389px;
+    }
+  
+
+    .expirationContainer p {
+      margin-right: 414px;
+      width: 112px;
+    }
+
+    .toggleBtn {
+      left: 90%;
+      width: 38px;
+      height: 20px;
+    }
+  
+    .toggleBtn .thumb {
+      width: 14px;
+      height: 14px;
+    }
+  
+    .createButtonModal {
+      width: 45%;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  /* Header */
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: relative; 
+  z-index: 1;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 11.5%;
+  width: 89%;
+  height: 1px;
+  background-color: #ECECF2;
+  z-index: 0;
+}
+
+
+.logoContainer{
+  margin-top: -25px;
+  margin-left: -12px;
+}
+
+.logoContainer img {
+  height: 32px;
+  width: 131.88px;
+}
+
+.greeting {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -25px;
+    margin-left: 138px;
+    width: 100%;
+}
+
+.greeting p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  color: #181820;
+  line-height: 21.66px;
+}
+
+.greeting p img{
+  width: 16px;
+  height: 16px;
+}
+
+.greeting span{
+  font-size: 14px;
+  font-weight: 400;
+  color: #878BA9;
+  line-height: 16.39px;
+  margin-left: 21px;
+  margin-top: -12px;
+}
+
+.createButton {
+  background-color: #1B48DA;
+  width: 140px; 
+  min-width: 140px; 
+  height: 30px;
+  color: #FFFFFF;
+  padding: 10px 14px;
+  border: 1px solid #1B48DA;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19.12px;
+  margin-top: 5px;
+  margin-right: 18px;
+
+}
+
+.inputField {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin-right: 164px;
+  margin-top: -11px;
+  width: 621px;
+}
+
+.inputField input{
+  border: none;
+  outline: none;
+}
+
+.inputField img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.inputField::placeholder {
+    color: #878BA9;
+    font-size: 14px;
+    line-height: 19.12px;
+    font-weight: 400;
+}
+
+.avatar {
+  width: 84px;
+  height: 40px;
+  background-color: #FDE48A;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #923E0E;
+  margin-top: -15px;
+}
+
+.logoutMenu {
+  position: absolute;
+  top: 67px;
+  right: 28px;
+  background-color: white;
+  border: 1px solid #ECECF2;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  width: 128px;
+  height: 34px;
+  color: #878BA9;
+  line-height: 19.12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+
+/* 📌 For Tablets (Portrait & Smaller Laptops) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .greeting {
+    margin-left: 195px;
+    margin-top: -46px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 195px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    width: 335px; 
+    margin-right: 80px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .logoutMenu {
+    top: 102px;
+    right: 133px;
+    width: 110px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 830px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; 
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    margin-top: -5px;
+    margin-left: -12px;
+  }
+
+  .greeting {
+    margin-left: 195px;
+    margin-top: -57px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 195px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    margin-left: 373px;
+    margin-top: -73px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 719px;
+    margin-top: -77px;
+  }
+
+  .logoutMenu {
+    top: 125px;
+    right: 15px;
+    width: 95px;
+    height: 30px;
+  }
+}
+
+
+/* 📌 For Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    margin-top: -5px;
+    margin-left: -12px;
+  }
+
+  .greeting {
+    margin-left: 195px;
+    margin-top: -57px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 195px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    margin-left: 373px;
+    margin-top: -73px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 666px;
+    margin-top: -77px;
+  }
+
+  .logoutMenu {
+    top: 125px;
+    right: 15px;
+    width: 95px;
+    height: 30px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; 
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    /* margin: 0 auto; */
+  }
+
+  .greeting {
+    margin-left: 174px;
+    margin-top: -50px;
+  }
+
+  .greeting p:first-child {
+    font-size: 16px; /* Reduce text size */
+  }
+
+  .greeting span {
+    font-size: 12px;
+  }
+
+  .createButton {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    justify-content: center;
+    margin: 10px 0;
+    margin-top: 17px;
+  }
+
+  .inputField {
+    width: 77%;
+    max-width: 350px;
+    margin: 8px auto;
+    margin-left: 2px;
+  }
+
+  .inputField input {
+    font-size: 13px; /* Adjust input text size */
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .logoutMenu {
+    top: 192px;
+    right: 21px;
+    width: 95px;
+    height: 26px;
+    font-size: 12px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 396px) {
+
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; 
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    /* margin: 0 auto; */
+  }
+
+  .greeting {
+    margin-left: 174px;
+    margin-top: -50px;
+  }
+
+  .greeting p:first-child {
+    font-size: 16px; /* Reduce text size */
+  }
+
+  .greeting span {
+    font-size: 12px;
+  }
+
+  .createButton {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    justify-content: center;
+    margin: 10px 0;
+    margin-top: 17px;
+  }
+
+  .inputField {
+    width: 77%;
+    max-width: 350px;
+    margin: 8px auto;
+    margin-left: 2px;
+  }
+
+  .inputField input {
+    font-size: 13px; /* Adjust input text size */
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .logoutMenu {
+    top: 215px;
+    right: 21px;
+    width: 95px;
+    height: 26px;
+    font-size: 12px;
+  }
+}
