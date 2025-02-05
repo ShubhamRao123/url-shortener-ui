@@ -121,8 +121,8 @@ App will be available at:
 
 For testing, you can use the following credentials:
 
-Email: demo@example.com
-Password: demo123
+Email: shubham@gmail.com
+Password: shubham
 
 
 
