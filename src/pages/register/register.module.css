@@ -192,27 +192,28 @@ body {
 /* ========== RESPONSIVE STYLES ========== */
 
 /* Tablets (768px and below) */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .header {
         margin-left: 844px;
         justify-content: flex-end;
         padding: 10px;
         gap: 10px;
-        margin-top: 32px;
+        margin-top: 0px;
         font-size: 14px;
         font-weight: 600;
     }
 
     .innerContainer h2 {
         font-size: 22px;
-        margin-top: 6%;
-        margin-left: -20px;
+        margin-top: 2%;
+        margin-left: -223px;
         width: 100%;
     }
 
     .form {
-        max-width: 80%;
+        max-width: 60%;
         margin: 0 auto;
+        margin-top: -20px;
     }
 
     .nameInput {
@@ -223,7 +224,55 @@ body {
     }
 
     .loginButton  {
+        width: 106%;
+        height: 42px;
+        font-size: 14px;
+        max-width: 820px
+    }
+
+    .signupLink {
+        margin-left: 0;
+        text-align: center;
+        display: block;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        margin-left: 844px;
+        justify-content: flex-end;
+        padding: 10px;
+        gap: 10px;
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .innerContainer h2 {
+        font-size: 22px;
+        margin-top: 6%;
+        margin-left: -319px;
         width: 100%;
+    }
+
+    .form {
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: -40px;
+        margin-left: 100px;
+    }
+
+    .nameInput {
+        max-width: 100%;
+        width: 763px;
+        height: 36px;
+        padding: 8px 12px;
+    }
+
+    .loginButton  {
+        width: 104%;
         height: 42px;
         font-size: 14px;
         max-width: 820px
