@@ -297,7 +297,7 @@ body {
     .innerContainer h2 {
         font-size: 22px;
         margin-top: 6%;
-        margin-left: -236px;
+        margin-left: -10px;
         width: 100%;
     }
 
@@ -348,7 +348,7 @@ body {
         margin-top: 5%;
         text-align: center;
         margin-bottom: 5%;
-        margin-left: -138px;
+        margin-left: -20px;
     }
 
     .form {

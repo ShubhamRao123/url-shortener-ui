@@ -614,6 +614,205 @@ html, body {
       left: 92%;
     }
   }
+
+
+  @media (max-width: 917px) {
+
+
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 49%; /* Adjust width for medium screens */
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 30%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 20%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 333px;
+    }
+    
+    .buttonContainer {
+      /* margin-top: 206px;
+      margin-bottom: -20px; */
+      margin-top: 58px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+
+  @media (max-width: 852px) {
+
+
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 49%; /* Adjust width for medium screens */
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 32%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 22%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 253px;
+    }
+    
+    .buttonContainer {
+      /* margin-top: 206px;
+      margin-bottom: -20px; */
+      margin-top: 58px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+  
+
+  @media (max-width: 794px) {
+
+
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 49%; /* Adjust width for medium screens */
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 36%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 24%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 265px;
+    }
+    
+    .buttonContainer {
+      /* margin-top: 206px;
+      margin-bottom: -20px; */
+      margin-top: 58px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+  
+
   
   @media (max-width: 768px) {
 
@@ -963,7 +1162,7 @@ html, body {
   .table tr {
     display: flex;
     justify-content: space-between;
-    min-width: 750px; /* Ensures the table doesn't shrink too much */
+    min-width: 750px; 
   }
 
   .table th,
@@ -972,47 +1171,60 @@ html, body {
     text-align: left;
     padding: 8px;
     box-sizing: border-box;
-    width: 100%; /* Ensure consistent width for th and td */
+    width: 100%; 
   }
 
-  /* Align thead and tbody content */
   .table thead tr,
   .table tbody tr {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start; 
   }
 
-  /* Truncate text for specific columns */
-  .table td:nth-child(1), /* Short Link */
-  .table td:nth-child(2) { /* Original Link */
+  .table td:nth-child(1), 
+  .table td:nth-child(2) { 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 114px; /* Adjust as needed */
+    max-width: 114px; 
   }
 
-  /* Show only date for Time column */
-  .table td:nth-child(3) { /* Time */
+
+
+  .table td:nth-child(3) { 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 110px;
-    margin-top: -38px;
+    /* margin-top: -38px; */
   }
 
-  /* Truncate text for Remarks column */
-.table td:nth-child(4) { /* Remarks */
+.table td:nth-child(4) { 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 106px;
 }
+.shortLinkCell img {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  left: 302px;
+  margin-left: 5px;
+  position: absolute;
+  color: black;
+  margin-top: 1px;
+  margin-left: -3px;
+}
+
 
   .pagination {
     position: static;
     margin-top: 10px;
   }
 }
+
+
+
 @media screen and (max-width: 768px) {
   .table {
     display: block;
@@ -1042,6 +1254,7 @@ html, body {
     padding: 8px;
     box-sizing: border-box;
     width: 100%; /* Ensure consistent width for th and td */
+    position: relative; /* Ensures child elements with absolute positioning stay inside */
   }
 
   /* Align thead and tbody content */
@@ -1058,6 +1271,7 @@ html, body {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 114px; /* Adjust as needed */
+    position: relative; /* Important for absolute positioning of child elements */
   }
 
   /* Show only date for Time column */
@@ -1069,18 +1283,33 @@ html, body {
   }
 
   /* Truncate text for Remarks column */
-.table td:nth-child(4) { /* Remarks */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 106px;
-}
+  .table td:nth-child(4) { /* Remarks */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 106px;
+  }
+
+  /* Stick the image inside the first column */
+  .table td:nth-child(1) {
+    position: relative; /* Allows absolute positioning inside */
+  }
+
+  .shortLinkCell img {
+    position: absolute;
+    left: 78px;
+    
+    width: 22px;
+    height: 22px;
+  }
 
   .pagination {
     position: static;
     margin-top: 10px;
   }
 }
+
+
 
 @media screen and (max-width: 480px) {
   .table {

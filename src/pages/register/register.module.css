@@ -291,15 +291,60 @@ body {
         justify-content: flex-end;
         padding: 10px;
         gap: 10px;
-        margin-top: 5px;
+        margin-top: 2px;
         font-size: 14px;
         font-weight: 600;
     }
 
     .innerContainer h2 {
         font-size: 22px;
-        margin-top: 6%;
+        margin-top: 3%;
         margin-left: -319px;
+        width: 100%;
+    }
+
+    .form {
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: -40px;
+        margin-left: 100px;
+    }
+
+    .nameInput {
+        max-width: 100%;
+        width: 763px;
+        height: 36px;
+        padding: 8px 12px;
+    }
+
+    .loginButton  {
+        width: 104%;
+        height: 42px;
+        font-size: 14px;
+        max-width: 820px
+    }
+
+    .signupLink {
+        margin-left: 0;
+        text-align: center;
+        display: block;
+    }
+}
+@media screen and (max-width: 983px) {
+    .header {
+        margin-left: 742px;
+        justify-content: flex-end;
+        padding: 10px;
+        gap: 10px;
+        margin-top: 2px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .innerContainer h2 {
+        font-size: 22px;
+        margin-top: 3%;
+        margin-left: -272px;
         width: 100%;
     }
 
