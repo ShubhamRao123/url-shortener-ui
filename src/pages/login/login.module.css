@@ -192,7 +192,9 @@ body {
 /* ========== RESPONSIVE STYLES ========== */
 
 /* Tablets (768px and below) */
-@media screen and (max-width: 1024px) {
+
+
+@media screen and (max-width: 1600px) {
     .header {
         margin-left: 844px;
         justify-content: flex-end;
@@ -236,6 +238,52 @@ body {
     }
 }
 
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        margin-left: 836px;
+        justify-content: flex-end;
+        padding: 10px;
+        gap: 10px;
+        margin-top: 32px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .innerContainer h2 {
+        font-size: 22px;
+        margin-top: 6%;
+        margin-left: -228px;
+        width: 100%;
+    }
+
+    .form {
+        max-width: 62%;
+        margin: 0 auto;
+    }
+
+    .nameInput {
+        max-width: 100%;
+        width: 763px;
+        height: 36px;
+        padding: 8px 12px;
+    }
+
+    .loginButton{
+        width: 105%;
+        height: 42px;
+        font-size: 14px;
+        max-width: 820px
+    }
+
+    .signupLink {
+        margin-left: 0;
+        text-align: center;
+        display: block;
+    }
+}
+
 @media screen and (max-width: 820px) {
     .header {
         margin-left: 0;
@@ -249,13 +297,13 @@ body {
     .innerContainer h2 {
         font-size: 22px;
         margin-top: 6%;
-        margin-left: 0;
+        margin-left: -181px;
         width: 100%;
     }
 
     .form {
         margin-left: 0;
-        max-width: 90%;
+        max-width: 68%;
         margin: 0 auto;
     }
 
@@ -266,7 +314,7 @@ body {
     }
 
     .loginButton{
-        max-width: 100%;
+        max-width: 101%;
         height: 42px;
         font-size: 14px;
     }
