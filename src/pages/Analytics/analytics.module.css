@@ -26,7 +26,7 @@ html, body {
 }
 
 .sidebar {
-  width: 250px;
+  /* width: 250px; */
   height: 100%;
   overflow: hidden; 
 }
@@ -168,4 +168,254 @@ html, body {
 
 .pagination .active {
   border: 0.66px solid #4200FF;
+}
+
+
+@media screen and (max-width: 820px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+
+  .table tr {
+    display: flex;
+    justify-content: space-between;
+    min-width: 750px; /* Ensures the table doesn't shrink too much */
+  }
+
+  .table th,
+  .table td {
+    flex: 1;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure consistent width for th and td */
+  }
+
+  /* Align thead and tbody content */
+  .table thead tr,
+  .table tbody tr {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  /* Truncate text for specific columns */
+  .table td:nth-child(1), /* Short Link */
+  .table td:nth-child(2) { /* Original Link */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 144px; /* Adjust as needed */
+  }
+
+  /* Show only date for Time column */
+  .table td:nth-child(3) { /* Time */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 185px;
+  }
+
+  /* Truncate text for Remarks column */
+/* .table td:nth-child(4) { 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 106px;
+} */
+
+  /* .pagination {
+    position: static;
+    margin-top: 10px;
+  } */
+
+  .pagination {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow pagination items to wrap to the next line */
+    justify-content: center; /* Center pagination items */
+    gap: 5px; /* Add some space between pagination items */
+  }
+
+  .pagination .page-item {
+    flex: 1 1 auto; /* Allow pagination items to grow and shrink */
+    text-align: center; /* Center text within each pagination item */
+  }
+}
+@media screen and (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+
+  .table tr {
+    display: flex;
+    justify-content: space-between;
+    min-width: 750px; /* Ensures the table doesn't shrink too much */
+  }
+
+  .table th,
+  .table td {
+    flex: 1;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure consistent width for th and td */
+  }
+
+  /* Align thead and tbody content */
+  .table thead tr,
+  .table tbody tr {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  /* Truncate text for specific columns */
+  .table td:nth-child(1), /* Short Link */
+  .table td:nth-child(2) { /* Original Link */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 144px; /* Adjust as needed */
+  }
+
+  /* Show only date for Time column */
+  .table td:nth-child(3) { /* Time */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 185px;
+  }
+
+  /* Truncate text for Remarks column */
+/* .table td:nth-child(4) { 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 106px;
+} */
+
+  /* .pagination {
+    position: static;
+    margin-top: 10px;
+  } */
+
+  .pagination {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow pagination items to wrap to the next line */
+    justify-content: center; /* Center pagination items */
+    gap: 5px; /* Add some space between pagination items */
+  }
+
+  .pagination .page-item {
+    flex: 1 1 auto; /* Allow pagination items to grow and shrink */
+    text-align: center; /* Center text within each pagination item */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+
+  .table tr {
+    display: flex;
+    justify-content: space-between;
+    min-width: 750px; /* Ensures the table doesn't shrink too much */
+  }
+
+  .table th,
+  .table td {
+    flex: 1;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure consistent width for th and td */
+  }
+
+  /* Align thead and tbody content */
+  .table thead tr,
+  .table tbody tr {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  /* Truncate text for specific columns */
+  .table td:nth-child(1), /* Short Link */
+  .table td:nth-child(2) { /* Original Link */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 144px; /* Adjust as needed */
+  }
+
+  /* Show only date for Time column */
+  .table td:nth-child(3) { /* Time */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 185px;
+  }
+
+  /* Truncate text for Remarks column */
+/* .table td:nth-child(4) { 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 106px;
+} */
+
+  /* .pagination {
+    position: static;
+    margin-top: 10px;
+  } */
+
+
+  .pagination {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow pagination items to wrap to the next line */
+    justify-content: center; /* Center pagination items */
+    gap: 5px; /* Add some space between pagination items */
+  }
+
+  .pagination .page-item {
+    flex: 1 1 auto; /* Allow pagination items to grow and shrink */
+    text-align: center; /* Center text within each pagination item */
+  }
 }
