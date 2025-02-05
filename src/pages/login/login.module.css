@@ -120,7 +120,7 @@ body {
     line-height: 27.32px;
     width: 82.25%;
     margin-top: 8%;
-    margin-left: -65px;
+    margin-left: -116px;
     margin-bottom: 10%;
     text-align: center;
 }
@@ -208,12 +208,12 @@ body {
     .innerContainer h2 {
         font-size: 22px;
         margin-top: 6%;
-        margin-left: -20px;
+        margin-left: -266px;
         width: 100%;
     }
 
     .form {
-        max-width: 80%;
+        max-width: 60%;
         margin: 0 auto;
     }
 
@@ -225,7 +225,7 @@ body {
     }
 
     .loginButton{
-        width: 100%;
+        width: 105%;
         height: 42px;
         font-size: 14px;
         max-width: 820px
@@ -254,7 +254,7 @@ body {
     .innerContainer h2 {
         font-size: 22px;
         margin-top: 6%;
-        margin-left: -228px;
+        margin-left: -275px;
         width: 100%;
     }
 
@@ -297,7 +297,7 @@ body {
     .innerContainer h2 {
         font-size: 22px;
         margin-top: 6%;
-        margin-left: -181px;
+        margin-left: -236px;
         width: 100%;
     }
 
@@ -348,6 +348,7 @@ body {
         margin-top: 5%;
         text-align: center;
         margin-bottom: 5%;
+        margin-left: -138px;
     }
 
     .form {

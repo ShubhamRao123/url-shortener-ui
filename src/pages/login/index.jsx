@@ -72,7 +72,7 @@ function Login() {
             <p className={styles.headerLogin}>Login</p>
           </div>
           <div className={styles.innerContainer}>
-            <h2>Join us Today!</h2>
+            <h2>Login</h2>
             <form onSubmit={handleRegister}>
               <div className={styles.form}>
                 <div className={styles.nameInput}>
