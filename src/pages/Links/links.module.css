@@ -224,7 +224,7 @@ html, body {
   
 
   
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
 
 
     .modalOverlay {
@@ -241,7 +241,7 @@ html, body {
     }
 
     .modalContent {
-      width: 49%; /* Adjust width for medium screens */
+      width: 49%; 
       height: auto;
     }
   
@@ -457,7 +457,589 @@ html, body {
       width: 45%;
     }
   }
+   */
+
+   
+  @media screen and (max-width: 1700px) {
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 29%;
+      height: 600px;
+    }
   
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 27%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 17%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 367px;
+    }
+    
+    .buttonContainer {
+      margin-top: 59px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 36%;
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 24%;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 17%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 440px;
+    }
+    
+    .buttonContainer {
+      margin-top: 59px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+  @media (min-width:1489px) and (max-width: 1518px) {
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 36%;
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 24%;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 17%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 429px;
+    }
+    
+    .buttonContainer {
+      margin-top: 59px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+
+    .errorText{
+      color: #FF0101;
+      font-size: 0.8rem;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      margin-right: 398px;
+    }
+    
+  }
+
+  @media (max-width: 1488px) {
+    
+  
+    .expirationContainer p {
+      margin-right: 411px;
+    }
+    
+   
+    
+  }
+
+
+  @media (max-width: 1488px) {
+    
+    .modalContent {
+      width: 44%;
+      /* height: auto; */
+      height: 600px;
+    }
+
+
+    .urlLabel
+    {
+     font-size: 16px;
+     width: 24%;
+   }
+
+   .remarksLabel{
+     font-size: 16px;
+     width: 17%;
+     margin-right: 389px;
+   }
+ 
+  
+    .expirationContainer p {
+      margin-right: 411px;
+    }
+    
+   
+    
+  }
+
+
+  @media (max-width: 1187px) {
+    
+    .modalContent {
+      width: 44%;
+      /* height: auto; */
+      height: 600px;
+    }
+
+
+    .urlLabel
+    {
+     font-size: 16px;
+     width: 24%;
+   }
+
+   .remarksLabel{
+     font-size: 16px;
+     width: 17%;
+     margin-right: 389px;
+   }
+ 
+  
+    .expirationContainer p {
+      margin-right: 411px;
+    }
+    
+   
+    
+  }
+
+  @media (max-width: 1242px) {
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 44%;
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+    {
+     font-size: 16px;
+     width: 24%;
+   }
+
+   .remarksLabel{
+     font-size: 16px;
+     width: 17%;
+     margin-right: 389px;
+   }
+ 
+  
+    .expirationContainer p {
+      margin-right: 411px;
+    }
+    
+    .buttonContainer {
+      margin-top: 59px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+
+
+  
+  @media (max-width: 1024px) {
+
+
+    .modalOverlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 49%; /* Adjust width for medium screens */
+      /* height: auto; */
+      height: 600px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 27%;
+      margin-right: 389px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 17%;
+      margin-right: 389px;
+    }
+  
+    .expirationContainer p {
+      margin-right: 367px;
+    }
+    
+    .buttonContainer {
+      /* margin-top: 206px;
+      margin-bottom: -20px; */
+      margin-top: 58px;
+    }
+
+    .createButtonModal {
+      margin-left: auto;
+      margin-right: 10px;
+      width: 30%;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+
+
+    .modalContent {
+      width: 64%;
+      padding: 15px;
+      margin-left: 0px;
+      z-index: 1200;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+    }
+  
+    .inputFieldModal,
+    .inputFieldModal1 {
+      font-size: 14px;
+    }
+  
+    .toggleBtn {
+      width: 45px;
+      height: 25px;
+      left: 91%;
+    }
+  
+    .toggleBtn .thumb {
+      height: 18px;
+      width: 18px;
+    }
+  
+    
+  
+    .buttonContainer {
+      padding: 10px;
+      margin-left: -15px;
+      margin-right: -15px;
+      /* margin-bottom: 32px; */
+      margin-top: 39px;
+    }
+
+    .clearButton {
+      color: #3B3C51;
+      width: 70px;
+      cursor: pointer;
+    }
+
+    .createButtonModal {
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+
+    .modalContent {
+      width: 75%;
+      padding: 12px;
+      margin-left: 5px;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+    }
+
+    .expirationContainer p {
+      margin-right: 414px;
+    }
+  
+    .toggleBtn {
+      left: 92%;
+      width: 40px;
+      height: 22px;
+    }
+  
+    .toggleBtn .thumb {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .createButtonModal {
+      width: 28%;
+      font-size: 14px;
+    }
+  
+    .buttonContainer {
+      padding: 8px;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modalOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1200;
+    }
+    .modalContent {
+      width: 72%;
+      margin-left: 3px;
+      height: auto;
+    }
+  
+    .modalHeader {
+      font-size: 16px;
+      margin-left: -13px;
+      margin-right: -12px;
+    }
+  
+    .modalHeader p {
+      margin-right: auto;
+    }
+  
+    .inputFieldModal,
+    .inputFieldModal1 {
+      font-size: 13px;
+    }
+
+    .remarksLabel{
+      font-size: 16px;
+      width: 85px;
+      margin-right: 389px;
+    }
+
+    .urlLabel
+     {
+      font-size: 16px;
+      width: 130px;
+      margin-right: 389px;
+    }
+  
+
+    .expirationContainer p {
+      margin-right: 414px;
+      width: 112px;
+    }
+
+    .toggleBtn {
+      left: 90%;
+      width: 38px;
+      height: 20px;
+    }
+  
+    .toggleBtn .thumb {
+      width: 14px;
+      height: 14px;
+    }
+  
+    .createButtonModal {
+      width: 45%;
+    }
+  }
+  
+
+
+
+
+
+
 
 
   .mainContent {
