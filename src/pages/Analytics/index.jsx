@@ -14,6 +14,7 @@ function Analytics() {
   const [error, setError] = useState(null);
   const [userId, setUserId] = useState(localStorage.getItem("userId"));
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortOrder, setSortOrder] = useState("asc");
   const rowsPerPage = 8;
 
   useEffect(() => {
@@ -71,6 +72,17 @@ function Analytics() {
     }
   };
 
+  // Handle sorting by timestamp
+  const handleSort = () => {
+    const sortedResponses = [...responses].sort((a, b) => {
+      const dateA = new Date(a.createdAt).getTime();
+      const dateB = new Date(b.createdAt).getTime();
+      return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
+    });
+    setResponses(sortedResponses);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // Toggle sorting order
+  };
+
   // Get responses for the current page
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
@@ -101,6 +113,7 @@ function Analytics() {
                     src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738668276/Icons_9_s2no4r.png"
                     alt=""
                     className={styles.sortIcon}
+                    onClick={handleSort} // Add onClick handler for sorting
                   />
                 </th>
                 <th>Original Link</th>
