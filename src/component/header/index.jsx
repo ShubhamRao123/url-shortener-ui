@@ -142,6 +142,21 @@ function Header({ fetchShortLinks }) {
     setHasExpiration(false);
   };
 
+  const date = new Date();
+  const hours = date.getHours();
+
+  let greeting;
+
+  if (hours >= 3 && hours < 12) {
+    greeting = "Good morning";
+  } else if (hours >= 12 && hours < 16) {
+    greeting = "Good afternoon";
+  } else if (hours >= 16 && hours < 21) {
+    greeting = "Good evening";
+  } else {
+    greeting = "Good night";
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>
@@ -152,12 +167,21 @@ function Header({ fetchShortLinks }) {
       </div>
       {/* Display the greeting and date */}
       <div className={styles.greeting}>
-        <p>
+        {/* <p>
           <img
             src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738577384/%EF%B8%8F_mpgsck.png"
             alt=""
           />{" "}
           Good morning,{" "}
+          {username.split(" ")[0].charAt(0).toUpperCase() +
+            username.split(" ")[0].slice(1)}
+        </p> */}
+        <p>
+          <img
+            src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738577384/%EF%B8%8F_mpgsck.png"
+            alt=""
+          />{" "}
+          {greeting},{" "}
           {username.split(" ")[0].charAt(0).toUpperCase() +
             username.split(" ")[0].slice(1)}
         </p>
