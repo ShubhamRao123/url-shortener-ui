@@ -26,6 +26,8 @@ function Links() {
   const [expiresAt, setExpiresAt] = useState("");
   const [sortOrder, setSortOrder] = useState("desc");
   const [statusSortOrder, setStatusSortOrder] = useState("active");
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [linkToDelete, setLinkToDelete] = useState(null);
 
   const location = useLocation();
   const searchQuery = new URLSearchParams(location.search).get("search") || "";
@@ -76,6 +78,32 @@ function Links() {
   const handleLinkUpdate = async () => {
     await fetchShortLinks(); // Refresh short links immediately
     setIsModalOpen(false); // Close modal
+  };
+
+  // delete modal
+
+  const handleDeleteClick = (link) => {
+    setLinkToDelete(link);
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleConfirmDelete = async () => {
+    try {
+      await deleteShortLink(linkToDelete.shortCode);
+      setShortLinks((prevLinks) =>
+        prevLinks.filter(
+          (shortLink) => shortLink.shortCode !== linkToDelete.shortCode
+        )
+      );
+    } catch (error) {
+      console.error("Delete error:", error);
+    } finally {
+      setIsDeleteModalOpen(false);
+    }
+  };
+
+  const handleCancelDelete = () => {
+    setIsDeleteModalOpen(false);
   };
 
   // Filter shortLinks based on searchQuery (remarks)
@@ -140,6 +168,30 @@ function Links() {
       setShortLinks(sortedLinks);
     }
   };
+
+  // const handleDeleteClick = (link) => {
+  //   setLinkToDelete(link);
+  //   setIsDeleteModalOpen(true);
+  // };
+
+  // const handleConfirmDelete = async () => {
+  //   try {
+  //     await deleteShortLink(linkToDelete.shortCode);
+  //     setShortLinks((prevLinks) =>
+  //       prevLinks.filter(
+  //         (shortLink) => shortLink.shortCode !== linkToDelete.shortCode
+  //       )
+  //     );
+  //   } catch (error) {
+  //     console.error("Delete error:", error);
+  //   } finally {
+  //     setIsDeleteModalOpen(false);
+  //   }
+  // };
+
+  // const handleCancelDelete = () => {
+  //   setIsDeleteModalOpen(false);
+  // };
 
   return (
     <div className={styles.container}>
@@ -235,7 +287,7 @@ function Links() {
                       onClick={() => handleEditClick(link)}
                       className={styles.editIcon}
                     />
-                    <img
+                    {/* <img
                       src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738319627/Icons_1_co154s.png"
                       alt="Delete"
                       onClick={async () => {
@@ -251,6 +303,12 @@ function Links() {
                           console.error("Delete error:", error);
                         }
                       }}
+                      className={styles.editIcon}
+                    /> */}
+                    <img
+                      src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738319627/Icons_1_co154s.png"
+                      alt="Delete"
+                      onClick={() => handleDeleteClick(link)}
                       className={styles.editIcon}
                     />
                   </td>
@@ -369,6 +427,39 @@ function Links() {
                   >
                     Save
                   </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Delete modal */}
+          {isDeleteModalOpen && (
+            <div>
+              <div className={styles.headerOverlay}>
+                {/* Empty overlay to cover the header */}
+              </div>
+              <div className={styles.deleteModal}>
+                <div className={styles.deleteModalContent}>
+                  <img
+                    src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738736299/window-close_noskus.png"
+                    alt=""
+                    onClick={handleCancelDelete}
+                  />
+                  <p>Are you sure you want to remove this link?</p>
+                  <div className={styles.deleteModalButtons}>
+                    <p
+                      className={styles.cancelDeleteButton}
+                      onClick={handleCancelDelete}
+                    >
+                      No
+                    </p>
+                    <p
+                      className={styles.confirmDeleteButton}
+                      onClick={handleConfirmDelete}
+                    >
+                      Yes
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
