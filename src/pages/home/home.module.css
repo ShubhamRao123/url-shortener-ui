@@ -20,7 +20,8 @@ html, body {
 }
 
 .container {
-  height: 100vh; /* Fill full viewport */
+  /* height: 100vh;  */
+  /* Fill full viewport */
 }
 
 .contentContainer {
@@ -40,7 +41,7 @@ html, body {
 .mainContent {
   flex: 1;
   min-width: 0; 
-  overflow-x: hidden;
+  /* overflow-y: hidden; */
   padding: 20px; 
   box-sizing: border-box;
 }
