@@ -134,8 +134,15 @@ function Analytics() {
                   </td>
                   {/* <td>{response.ipAddress}</td> */}
                   <td>{response.ipAddress.split(",")[0]}</td>
-                  <td>
+                  {/* <td>
                     {response.userDevice.match(/[a-zA-Z]+(?=[^a-zA-Z]*$)/)[0]}
+                  </td> */}
+                  <td>
+                    {response.userDevice.toLowerCase().includes("android")
+                      ? "Android"
+                      : response.userDevice.match(
+                          /[a-zA-Z]+(?=[^a-zA-Z]*$)/
+                        )[0]}
                   </td>
                 </tr>
               ))}
