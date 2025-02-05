@@ -22,6 +22,8 @@ function Settings() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [showModal, setShowModal] = useState(false);
+
   // Fetch user details on component mount
   useEffect(() => {
     const getUserDetails = async () => {
@@ -68,27 +70,34 @@ function Settings() {
   };
 
   const handleDeleteAccount = async () => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete your account? This action cannot be undone."
-    );
+    try {
+      await deleteUser();
+      toast.success("Account deleted successfully");
 
-    if (confirmDelete) {
-      try {
-        await deleteUser();
-        toast.success("Account deleted successfully");
+      // Clear user data from localStorage
+      localStorage.removeItem("token");
+      localStorage.removeItem("username");
+      localStorage.removeItem("userEmail");
+      localStorage.removeItem("userPhone");
 
-        // Clear user data from localStorage
-        localStorage.removeItem("token");
-        localStorage.removeItem("username");
-        localStorage.removeItem("userEmail");
-        localStorage.removeItem("userPhone");
-
-        // Navigate to the Register page
-        navigate("/");
-      } catch (error) {
-        alert(error.message);
-      }
+      // Navigate to the Register page
+      navigate("/");
+    } catch (error) {
+      alert(error.message);
     }
+  };
+
+  const handleDeleteModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleConfirmDelete = () => {
+    handleDeleteAccount();
+    setShowModal(false);
   };
 
   return (
@@ -141,13 +150,42 @@ function Settings() {
               <button type="button" onClick={handleSaveClick}>
                 Save Changes
               </button>
-              <button type="button" onClick={handleDeleteAccount}>
+              <button type="button" onClick={handleDeleteModal}>
                 Delete Account
               </button>
             </form>
           )}
         </div>
       </div>
+
+      {showModal && (
+        <div>
+          <div className={styles.headerOverlay}>
+            {/* Empty overlay to cover the header */}
+          </div>
+          <div className={styles.modal}>
+            <div className={styles.modalContent}>
+              <img
+                src="https://res.cloudinary.com/dfrujgo0i/image/upload/v1738736299/window-close_noskus.png"
+                alt=""
+                onClick={handleCloseModal}
+              />
+              <p>Are you sure you want to delete your account?</p>
+              <div className={styles.modalButtons}>
+                <p className={styles.closeDelete} onClick={handleCloseModal}>
+                  No
+                </p>
+                <p
+                  className={styles.confirmDelete}
+                  onClick={handleConfirmDelete}
+                >
+                  Yes
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
