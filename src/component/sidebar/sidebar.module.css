@@ -65,7 +65,7 @@ body {
     position: absolute;
     bottom: -25px;
     left: 0;
-    width: 100%;
+    width: 89%;
     height: 1px;
     background-color: #e0e4eb;
   }
@@ -89,7 +89,7 @@ body {
         /* position: fixed; */
         position: absolute;
         left: -250px;
-        top: 187px;
+        top: 220px;
         width: 220px;
         height: 100vh;
         background-color: white;

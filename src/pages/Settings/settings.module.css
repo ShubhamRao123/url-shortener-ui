@@ -124,7 +124,8 @@ form button:last-of-type {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .mainContent {
-    margin-left: 200px;
+    /* margin-left: 200px; */
+    margin-left: 50px;
   }
 
   .formGroupName {
@@ -224,6 +225,92 @@ form button:last-of-type {
     margin-top: 67px;
     padding: 10px;
   }
+
+  form p {
+    font-size: 14px;
+  }
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .mainContent {
+    margin-left: -241px;
+    margin-top: 67px;
+    padding: 10px;
+  }
+
+  form p {
+    font-size: 14px;
+  }
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .mainContent {
+    margin-left: -241px;
+    margin-top: 67px;
+    padding: 10px;
+  }
+
+  .formGroupName{
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .formGroupName1 {
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .formGroupName2 {
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+
+  form p {
+    font-size: 14px;
+  }
+
+  form button:first-of-type,
+  form button:last-of-type {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 330px) {
+  .mainContent {
+    margin-left: -241px;
+    margin-top: 67px;
+    padding: 10px;
+  }
+
+  .formGroupName{
+    align-items: flex-start;
+    gap: 26px;
+  }
+
+  .formGroupName1 {
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .formGroupName2 {
+    align-items: flex-start;
+    gap: 19px;
+  }
+
 
   form p {
     font-size: 14px;

@@ -955,6 +955,12 @@ body {
     margin-top: -46px;
   }
 
+  
+  .logoContainer {
+    margin-top: 4px;
+    margin-left: 0px;
+  }
+
   .createButton {
     width: 120px;
     font-size: 14px;
@@ -976,8 +982,8 @@ body {
   }
 
   .logoutMenu {
-    top: 102px;
-    right: 133px;
+    top: 126px;
+    right: 159px;
     width: 110px;
     height: 30px;
   }
@@ -1084,6 +1090,214 @@ body {
   .logoutMenu {
     top: 125px;
     right: 15px;
+    width: 95px;
+    height: 30px;
+  }
+}
+@media  (max-width: 710px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    margin-top: -5px;
+    margin-left: -12px;
+  }
+
+  .greeting {
+    margin-left: 195px;
+    margin-top: -57px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 195px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    margin-left: 373px;
+    margin-top: -73px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 598px;
+    margin-top: -77px;
+  }
+
+  .logoutMenu {
+    top: 125px;
+    right: 52px;
+    width: 95px;
+    height: 30px;
+  }
+}
+
+
+@media  (max-width: 647px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    margin-top: -5px;
+    margin-left: -12px;
+  }
+
+  .greeting {
+    margin-left: 152px;
+    margin-top: -57px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 153px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    margin-left: 329px;
+    margin-top: -73px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 547px;
+    margin-top: -77px;
+  }
+
+  .logoutMenu {
+    top: 125px;
+    right: 52px;
+    width: 95px;
+    height: 30px;
+  }
+}
+
+
+@media  (max-width: 595px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    margin-top: -5px;
+    margin-left: -12px;
+  }
+
+  .greeting {
+    margin-left: 152px;
+    margin-top: -57px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 139px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    margin-left: 314px;
+    margin-top: -73px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 530px;
+    margin-top: -77px;
+  }
+
+  .logoutMenu {
+    top: 125px;
+    right: 52px;
+    width: 95px;
+    height: 30px;
+  }
+}
+@media  (max-width: 569px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+  }
+
+  .container::after {
+    left: 10%;
+    width: 80%;
+  }
+
+  .logoContainer {
+    margin-top: -5px;
+    margin-left: -12px;
+  }
+
+  .greeting {
+    margin-left: 152px;
+    margin-top: -57px;
+  }
+
+  .createButton {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-left: 139px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .inputField {
+    margin-left: 314px;
+    margin-top: -73px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 530px;
+    margin-top: -77px;
+  }
+
+  .logoutMenu {
+    top: 125px;
+    right: 52px;
     width: 95px;
     height: 30px;
   }

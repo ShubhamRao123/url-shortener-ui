@@ -43,7 +43,7 @@ html, body {
 .mainContent {
   width: 100%;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #FFFFFF;
   overflow-y: hidden; 
   margin-left: -28px;
   min-height: 100vh; 
@@ -139,8 +139,9 @@ html, body {
   bottom: 40px;
   left: 219px;
   right: 0;
-  background-color: #f8f9fa;
+  background-color: #FFFFFF;
   padding: 10px 0;
+  
 }
 
 .pagination button {
@@ -152,6 +153,7 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  border: 0.66px solid #DFE3E8;
 }
 
 .prevButton {
